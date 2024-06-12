@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Изненада за Приятели</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            color: #333;
+        }
+        input {
+            padding: 10px;
+            font-size: 16px;
+            margin: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #message {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Изненада за Приятели</h1>
+    <p>Моля, въведете вашето име:</p>
+    <input type="text" id="nameInput" placeholder="Вашето име">
+    <button onclick="timeForAdventure()">Изпрати</button>
+    <div id="message"></div>
+
+    <script>
+        function timeForAdventure() {
+            let name = document.getElementById('nameInput').value;
+            let message = '';
+
+            if (name === 'Ivelina') {
+                message = 'Здравей, Ивелина! Надявам се, че имаш прекрасен ден! 🎨';
+            } else if (name === 'Ivan') {
+                message = 'Здравей, Иван! Не забравяй, че си невероятен! 💪';
+            } else if (name === 'Ivailo') {
+                message = 'Здравей, Ивайло! Винаги впечатляваш с уменията си! 📊';
+            } else if (name === 'Niki') {
+                message = 'Здравей, Ники! Твоята усмивка озарява всичко! 😊';
+            } else {
+                message = 'Здравей! Радвам се да те видя, но изглежда не си в списъка с приятели.';
+            }
+
+            document.getElementById('message').innerText = message;
+        }
+    </script>
+</body>
+</html>
